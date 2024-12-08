@@ -5,8 +5,9 @@ exports.getIndex = (req, res) => {
   res.render("index", { path: "/", css: {} });
 };
 
-exports.getProductsPage = (req, res) => {
-  res.render("products", { path: "/products", css: {} });
+exports.getProductsPage = async (req, res) => {
+  const products = await Product.fetchAll();
+  res.render("products", { path: "/products", css: {}, products });
 };
 
 exports.getAddProductPage = (req, res) => {
@@ -14,15 +15,8 @@ exports.getAddProductPage = (req, res) => {
 };
 
 exports.postAddProduct = async (req, res) => {
-  console.log("inside controller");
-  const products = await readDBFile();
-  const { name, image, price, description } = req.body;
-  console.log("$$$$$$$", req.body);
+  const { name, description, price, image } = req.body;
   const product = new Product(name, description, price, image);
-
-  const newProducts = products.concat(product);
-
-  console.log("i am here");
-  writeDBFile(newProducts);
+  await product.save();
   res.redirect("/");
 };

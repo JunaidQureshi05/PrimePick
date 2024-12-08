@@ -19,5 +19,5 @@ app.use(orderRoutes);
 app.use("/", _404Controller.get404Page);
 
 app.listen(PORT, () => {
-  console.log("Server started🚀");
+  console.log(`Server started on port ${PORT} 🚀`);
 });

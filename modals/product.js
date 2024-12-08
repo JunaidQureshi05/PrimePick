@@ -1,4 +1,4 @@
-let products = [];
+const { writeDBFile, readDBFile } = require("../utils/helpers");
 
 class Product {
   constructor(name, description, price, image) {
@@ -8,11 +8,15 @@ class Product {
     this.image = image;
   }
 
-  static fetchAll() {
+  static async fetchAll() {
+    const products = await readDBFile();
     return products;
   }
-  save() {
-    products.push(this);
+  async save() {
+    const products = await readDBFile();
+    const newProducts = products.concat(this);
+    let res = await writeDBFile(newProducts);
+    return res;
   }
 }
 
