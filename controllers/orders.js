@@ -2,5 +2,5 @@
 
 
 exports.getOrdersPage = (req,res)=>{
-    res.render("orders",{path:'/orders'})
+    res.render("orders",{path:'/orders',css:{}})
 }

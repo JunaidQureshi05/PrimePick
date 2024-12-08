@@ -1,0 +1,44 @@
+.container {
+    max-width: 80%;
+    margin: auto;
+    padding:16px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container .formGroup {
+ margin-bottom: 12px;
+width: 500px;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+.container .formGroup label {
+    font-weight: bold;
+    
+}
+.container .formGroup input {
+    width: 100%;
+    display: block;
+    height: 30px;
+    margin-top: 8px;
+    padding: 4px;
+}
+
+.container button {
+  padding: 4px 8px;
+  border: 1px solid black;
+  background-color: white;
+  font-weight: bold;
+}
+
+.container button:hover {
+    background-color: black;
+    color: white;
+}
+
+

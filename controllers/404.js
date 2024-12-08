@@ -1,4 +1,4 @@
 
 exports.get404Page = (req,res)=>{
-    res.render("404",{path:''})
+    res.render("404",{path:'',css:{}})
 }

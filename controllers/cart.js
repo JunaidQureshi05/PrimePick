@@ -1,5 +1,5 @@
 
 
 exports.getCartPage  = (req,res)=>{
-    res.render("cart",{path:'/cart'})
+    res.render("cart",{path:'/cart',css:{}})
 }
