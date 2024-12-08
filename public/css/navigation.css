@@ -17,10 +17,11 @@ header nav {
     background-color: black;
 }
 
-header nav h1 {
+header nav h1 a {
     color: white;
     text-transform: uppercase;
     letter-spacing: 4px;
+    text-decoration: none;
 }
 
 .nav-links {
