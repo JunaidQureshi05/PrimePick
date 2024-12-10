@@ -1,13 +1,14 @@
 const Product = require("../modals/product");
-const { readDBFile, writeDBFile } = require("../utils/helpers");
+const { readDBFile, writeDBFile, formatIndianCurrency } = require("../utils/helpers");
 
 exports.getIndex = (req, res) => {
   res.render("index", { path: "/", css: {} });
 };
 
 exports.getProductsPage = async (req, res) => {
-  const products = await Product.fetchAll();
-  res.render("products", { path: "/products", css: {}, products });
+  let  products = await Product.fetchAll();
+     products = products.map(p=>({...p,price:formatIndianCurrency(+p.price)}))
+  res.render("products", { path: "/products", css: {productCSS:true}, products });
 };
 
 exports.getAddProductPage = (req, res) => {

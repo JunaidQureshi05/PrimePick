@@ -1,9 +1,13 @@
-<%-include('partials/head')%> <% if (products.length===0) { %>
+<%-include('partials/head')%>
+ <% if (products.length===0) { %>
 <h1>No products found...</h1>
 
  <% }else { %> 
+   <div class="products">
     <% products.forEach(product => { %>
-        <h3><%=product.name%></h3>
+        <%-include('partials/product',{product})%>
      <% }) %> 
+
+     </div>
 <% } %>
 <%-include('partials/end')%>

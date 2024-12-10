@@ -31,3 +31,10 @@ exports.writeDBFile = (content) =>
       }
     });
   });
+
+
+
+  exports.formatIndianCurrency = function (amount) {
+    const formattedAmount = amount.toLocaleString("en-IN");
+    return `₹${formattedAmount}`;
+  }
