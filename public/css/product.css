@@ -1,66 +1,75 @@
 .products {
-    display: flex;
-    gap: 16px;
-    padding: 16px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .product {
-    border: 1px solid #c4c4c4;
-    border-radius: 4px;
-    width: 300px;
-    padding: 16px;
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  width: 300px;
+  padding: 16px;
 }
 
-
 .product .image {
-    height: 300px;  
-    border: 1px solid #c4c4c4 ;
-    margin-bottom: 16px;
+  height: 300px;
+  border: 1px solid #c4c4c4;
+  margin-bottom: 16px;
 }
 
 .product .image img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .name {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 6px;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
 }
 
 .price {
-    font-weight: 14px; 
-    color: grey;
-    font-weight: bold; 
+  font-weight: 14px;
+  color: grey;
+  font-weight: bold;
 }
 
 .buttons {
-    margin-top: 8px;
+  margin-top: 8px;
+  display: flex;
+  gap: 6px;
 }
 
 .buttons button {
-    cursor:pointer;
+  cursor: pointer;
 }
 
-.addButton{
-    background-color: black;
-    padding: 4px 8px;
-    color: white;
-    border: none;
-    font-size: 14px;
-    font-weight: bold;
+.addButton {
+  background-color: #008ecc;
+  border-radius: 12px;
+  padding: 8px 14px;
+  color: white;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
 }
 
-.detailsButton{
-    background-color: white;
-    padding: 4px 8px;
-    border: none;
-    font-size: 14px;
-    font-weight: bold;
-    border: 1px solid black;
+.detailsButton {
+  background-color: white;
+  padding: 8px 14px;
+  border-radius: 12px;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: #008ecc;
+  border: 1px solid #008ecc;
+}
+form {
+  margin: 0;
+  padding: 0;
+  height: fit-content;
 }
