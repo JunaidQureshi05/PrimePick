@@ -1,0 +1,6 @@
+<%-include('partials/head')%> <% if (product) { %>
+<img src="<%=product.image%>" />
+<h1><%=product.name%></h1>
+<h3><%=product.description%></h3>
+<h3><%=product.price%></h3>
+<% } %> <%-include('partials/end')%>

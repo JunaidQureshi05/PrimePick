@@ -1,6 +1,7 @@
 const express = require("express");
 const fs = require("fs");
 const app = express();
+const db = require("./utils/db");
 const productRoutes = require("./routes/products");
 const cartRoutes = require("./routes/cart");
 const orderRoutes = require("./routes/orders");

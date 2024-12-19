@@ -1,5 +1,5 @@
 const { writeDBFile, readDBFile } = require("../utils/helpers");
-
+const db = require("../utils/db");
 class Product {
   constructor(name, description, price, image) {
     this.name = name;
@@ -9,14 +9,16 @@ class Product {
   }
 
   static async fetchAll() {
-    const products = await readDBFile();
-    return products;
+    return db.execute("SELECT * FROM products");
   }
   async save() {
-    const products = await readDBFile();
-    const newProducts = products.concat(this);
-    let res = await writeDBFile(newProducts);
-    return res;
+    return db.execute(
+      "INSERT INTO products (name,description,price,image) VALUES (?,?,?,?)",
+      [this.name, this.description, +this.price, this.image]
+    );
+  }
+  static async findById(id) {
+    return db.execute("SELECT * FROM products WHERE id=?", [id]);
   }
 }
 
