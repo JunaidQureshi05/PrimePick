@@ -4,12 +4,21 @@
   </div>
   <span class="name"> <%=product.name %> </span>
   <span class="price"> <%=product.price%> </span>
+  <span class="actualPrice"><%=product.price%></span>
+  <div class="rating">
+    <% for( let index = 0; index < product.rating; index++ ) { %>
+    <i class="fa-solid fa-star"></i>
+    <% } %> <% for( let index = 0; index < 5-product.rating; index++ ) { %>
+    <i class="fa-regular fa-star"></i>
+    <% } %>
+  </div>
+
   <div class="buttons">
     <form method="POST" action="/add-to-cart/<%=product.id%>">
-      <button class="addButton" type="submit">Add to cart</button>
+      <button class="addButton" type="submit">Add</button>
     </form>
     <form method="GET" action="/product-details/<%=product.id%>">
-      <button class="detailsButton">View details</button>
+      <button class="detailsButton">Details</button>
     </form>
   </div>
 </div>

@@ -1,0 +1,15 @@
+.heroSection {
+  height: calc(100vh - 56px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.heroSection p {
+  font-size: 60px;
+}
+
+.title {
+  color: rgb(40, 113, 98);
+}

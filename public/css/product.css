@@ -8,15 +8,16 @@
 }
 
 .product {
-  border: 1px solid #c4c4c4;
-  border-radius: 4px;
-  width: 300px;
+  border-radius: 10px;
+  width: 250px;
   padding: 16px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 .product .image {
-  height: 300px;
-  border: 1px solid #c4c4c4;
+  height: 200px;
   margin-bottom: 16px;
 }
 
@@ -33,9 +34,13 @@
 }
 
 .price {
-  font-weight: 14px;
-  color: grey;
-  font-weight: bold;
+  color: #008ecc;
+  font-size: 20px;
+}
+
+.actualPrice {
+  text-decoration: line-through;
+  margin-left: 6px;
 }
 
 .buttons {
@@ -49,13 +54,15 @@
 }
 
 .addButton {
-  background-color: #008ecc;
-  border-radius: 12px;
+  background-color: white;
   padding: 8px 14px;
-  color: white;
+  border-radius: 12px;
   border: none;
   font-size: 14px;
   font-weight: bold;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: white;
 }
 
 .detailsButton {
@@ -65,11 +72,16 @@
   border: none;
   font-size: 14px;
   font-weight: bold;
-  color: #008ecc;
-  border: 1px solid #008ecc;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
 }
 form {
   margin: 0;
   padding: 0;
   height: fit-content;
+}
+
+.rating {
+  margin-top: 6px;
+  color: var(--tertiary-color);
 }

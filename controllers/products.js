@@ -6,7 +6,7 @@ const {
 } = require("../utils/helpers");
 
 exports.getIndex = (req, res) => {
-  res.render("index", { path: "/", css: {} });
+  res.render("index", { path: "/", css: { index: true } });
 };
 
 exports.getProductsPage = async (req, res) => {
